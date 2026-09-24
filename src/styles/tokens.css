@@ -1,70 +1,19 @@
-/* ==========================================================================
-   Design tokens — "Nebula" palette
-   Every color, font, spacing and motion value used across the site lives here,
-   so the whole look can be re-themed from this single file.
-   ========================================================================== */
+/* Colors and sizes shared across the site */
 
 :root {
   color-scheme: dark;
 
-  /* Surfaces */
-  --bg: #0a0912;
-  --bg-elevated: #110f1d;
-  --surface: rgba(28, 23, 48, 0.45);
-  --surface-hover: rgba(36, 29, 62, 0.6);
-
-  /* Text */
-  --text: #ebe8f5;
-  --text-muted: #9d98b5;
-  --text-faint: #6e6987;
-
-  /* Accents */
+  --bg: #09080d;
+  --text: #e4e1ee;
+  --heading: #d4cff0;
+  --muted: #908cab;
   --accent: #a78bfa;
-  --accent-2: #7c6cf2;
-  --accent-soft: rgba(167, 139, 250, 0.1);
-  --accent-line: rgba(167, 139, 250, 0.25);
-  --accent-glow: rgba(167, 139, 250, 0.35);
+  --accent-bg: rgba(167, 139, 250, 0.1);
+  --accent-border: rgba(167, 139, 250, 0.2);
+  --card-bg: rgba(30, 22, 58, 0.3);
+  --card-bg-hover: rgba(30, 22, 58, 0.45);
+  --card-border: rgba(150, 130, 255, 0.1);
 
-  /* Lines */
-  --border: rgba(160, 150, 220, 0.12);
-  --border-strong: rgba(160, 150, 220, 0.22);
-
-  /* Typography */
-  --font-display: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --font-body: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
-
-  /* Fluid type scale (min at 360px, max at 1440px) */
-  --fs-xs: 0.8rem;
-  --fs-sm: 0.9rem;
-  --fs-base: clamp(0.96rem, 0.93rem + 0.15vw, 1.02rem);
-  --fs-lg: clamp(1.05rem, 1rem + 0.25vw, 1.2rem);
-  --fs-xl: clamp(1.5rem, 1.3rem + 0.8vw, 1.9rem);
-  --fs-hero: clamp(2.6rem, 1.6rem + 5vw, 5.5rem);
-
-  /* Spacing */
-  --space-1: 0.25rem;
-  --space-2: 0.5rem;
-  --space-3: 0.75rem;
-  --space-4: 1rem;
-  --space-5: 1.5rem;
-  --space-6: 2rem;
-  --space-7: 3rem;
-  --space-8: 4.5rem;
-  --space-9: 7rem;
-  --gutter: clamp(1.25rem, 0.8rem + 3vw, 4.5rem);
-
-  /* Shape */
-  --radius-sm: 6px;
-  --radius: 10px;
-  --radius-pill: 999px;
-
-  /* Layout */
-  --sidebar-w: 340px;
-  --content-max: 820px;
-
-  /* Motion */
-  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
-  --dur-fast: 180ms;
-  --dur: 320ms;
-  --dur-slow: 800ms;
+  --font: 'Segoe UI', system-ui, -apple-system, Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --sidebar-w: 380px;
 }

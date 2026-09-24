@@ -208,15 +208,13 @@ export function initScene(canvas, getProgress) {
   );
   scene.add(dust);
 
-  // --- Sizing: the sphere sits to the right of the hero text on wide screens ---
-  let offsetX = 0;
+  // --- Sizing ---
   const resize = () => {
     const width = window.innerWidth;
     const height = window.innerHeight;
     renderer.setSize(width, height, false);
     camera.aspect = width / height;
     camera.updateProjectionMatrix();
-    offsetX = camera.aspect > 1.15 ? RADIUS * 0.9 : 0;
   };
   resize();
   window.addEventListener('resize', resize);
@@ -255,7 +253,6 @@ export function initScene(canvas, getProgress) {
 
     const breathe = 1 + Math.sin(elapsed * 0.8) * 0.015;
     sphere.scale.setScalar(breathe * (1 + eased * 0.9));
-    sphere.position.x = MathUtils.lerp(offsetX, 0, eased);
     sphere.rotation.y = elapsed * 0.06 + tilt.y;
     sphere.rotation.x = tilt.x;
 

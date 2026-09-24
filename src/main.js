@@ -4,20 +4,12 @@
  */
 import './styles/tokens.css';
 import './styles/base.css';
-import './styles/layout.css';
-import './styles/sections.css';
-import './styles/projects.css';
+import './styles/portfolio.css';
 
-import { initActiveNav, initMenu, initReveal, initScrollProgress, initYear } from './ui.js';
-
-// Lets CSS know JS is running (reveal animations are skipped without it).
-document.documentElement.classList.add('js');
+import { initActiveNav, initScrollProgress } from './ui.js';
 
 const getProgress = initScrollProgress();
-initMenu();
-initReveal();
 initActiveNav();
-initYear();
 
 // Three.js is loaded in a separate chunk so the page content renders first.
 const canvas = document.getElementById('scene');
