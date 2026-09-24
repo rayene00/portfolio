@@ -145,6 +145,139 @@
            MAIN CONTENT
            ================================================================ -->
       <main class="content" id="main">
+        <!-- ---------------------------------------------------------- 01 ABOUT -->
+        <section class="section" id="about" aria-labelledby="about-title">
+          <header class="section__head reveal">
+            <span class="section__num">01</span>
+            <h2 class="section__title" id="about-title">About me</h2>
+          </header>
+
+          <div class="about">
+            <div class="about__text reveal">
+              <p>
+                I'm a fourth-year <strong>computer engineering student at CESI</strong> in
+                Aix-en-Provence, France, in a five-year integrated M.Eng. program (graduating
+                September 2028). My coursework covers algorithms and complexity, distributed systems,
+                databases, operations research and network architecture.
+              </p>
+              <p>
+                Alongside my degree, I work as a <strong>software engineer at Sopra Steria</strong>
+                in a work-study program. I build and maintain Java components on an enterprise master
+                data management platform for an industrial client. Day to day, that means backend
+                development, workflow design and fixing production issues in a small Agile team.
+              </p>
+              <p>
+                I'm looking for a <strong>software engineering internship in the US or Canada for
+                Summer 2027</strong> (July to September), and I'm ready to relocate for it. I'm a
+                French citizen, eligible for a J-1 exchange visa and for Canada's International
+                Experience Canada work permit.
+              </p>
+              <p>Outside of code, I compete in amateur boxing.</p>
+            </div>
+
+            <dl class="facts">
+              <div class="fact reveal">
+                <dt>Based in</dt>
+                <dd>Marseille, France</dd>
+              </div>
+              <div class="fact reveal">
+                <dt>Degree</dt>
+                <dd>M.Eng. Computer Engineering, CESI · 2028</dd>
+              </div>
+              <div class="fact reveal">
+                <dt>Currently</dt>
+                <dd>Software Engineer, Sopra Steria</dd>
+              </div>
+              <div class="fact reveal">
+                <dt>Languages</dt>
+                <dd>French · English (TOEIC 800) · Arabic</dd>
+              </div>
+              <div class="fact reveal">
+                <dt>Work eligibility</dt>
+                <dd>J-1 (US) · IEC (Canada)</dd>
+              </div>
+              <div class="fact fact--accent reveal">
+                <dt>Available</dt>
+                <dd>July – September 2027</dd>
+              </div>
+            </dl>
+          </div>
+        </section>
+
+        <!-- ----------------------------------------------------- 02 EXPERIENCE -->
+        <section class="section" id="experience" aria-labelledby="experience-title">
+          <header class="section__head reveal">
+            <span class="section__num">02</span>
+            <h2 class="section__title" id="experience-title">Experience</h2>
+          </header>
+
+          <ol class="timeline">
+            <li class="timeline__item reveal">
+              <p class="timeline__date"><time datetime="2025-10">Oct 2025</time> — Present</p>
+              <h3 class="timeline__role">Software Engineer <span>· Sopra Steria</span></h3>
+              <p class="timeline__meta">Work-study program · Aix-en-Provence, France</p>
+              <ul class="timeline__points">
+                <li>
+                  Build and maintain Java components on a 10-model TIBCO EBX master data management
+                  platform for Arkema, a global specialty chemicals group, in a 4-person Agile team.
+                </li>
+                <li>
+                  Developed and debugged 20+ data-governance workflows. One fix was a
+                  premature-termination bug that dropped user submissions before they reached
+                  validation.
+                </li>
+                <li>
+                  Automated the anonymization of confidential records across 600+ tables. It
+                  replaced a manual, record-by-record process that slowed down every test-environment
+                  setup.
+                </li>
+                <li>
+                  Found and fixed the root cause of 60+ production defects reported by the client's
+                  business users, from array-bounds failures to node-resolution errors in the
+                  workflow engine.
+                </li>
+              </ul>
+              <ul class="tags" aria-label="Technologies">
+                <li>Java</li><li>TIBCO EBX</li><li>MDM</li><li>SQL</li><li>Agile</li>
+              </ul>
+            </li>
+
+            <li class="timeline__item reveal">
+              <p class="timeline__date"><time datetime="2025-04">Apr</time> — <time datetime="2025-07">Jul 2025</time></p>
+              <h3 class="timeline__role">Software Development Intern <span>· ArcelorMittal</span></h3>
+              <p class="timeline__meta">Internship · Fos-sur-Mer, France</p>
+              <ul class="timeline__points">
+                <li>
+                  Developed a configurable SQL Server monitoring service in C# (.NET). Site IT can
+                  define watch targets and alert thresholds without changing code.
+                </li>
+                <li>
+                  Migrated the real-time supervision interface for the steelworks' water discharge
+                  (flow, pH, temperature) onto the plant's certified IoT sensor database.
+                </li>
+                <li>
+                  Moved ASURE, the application that produces the plant's monthly environmental reports
+                  to the regulator, onto that same certified data source, and deployed Prometheus
+                  across environmental servers and workstations.
+                </li>
+              </ul>
+              <ul class="tags" aria-label="Technologies">
+                <li>C#</li><li>.NET</li><li>SQL Server</li><li>Prometheus</li><li>IoT</li>
+              </ul>
+            </li>
+
+            <li class="timeline__item timeline__item--edu reveal">
+              <p class="timeline__date"><time datetime="2023-09">Sep 2023</time> — <time datetime="2028-09">Sep 2028</time></p>
+              <h3 class="timeline__role">M.Eng. Computer Engineering <span>· CESI Engineering School</span></h3>
+              <p class="timeline__meta">5-year integrated program (master's level) · Aix-en-Provence, France</p>
+              <p class="timeline__desc">
+                Operations research, metaheuristics, algorithms and complexity, distributed systems,
+                databases, network architecture.
+              </p>
+            </li>
+          </ol>
+        </section>
+
         <!-- SECTIONS -->
       </main>
     </div>
