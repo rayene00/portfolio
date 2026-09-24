@@ -1,0 +1,71 @@
+/* ==========================================================================
+   Design tokens — "Ember" palette
+   Every color, font, spacing and motion value used across the site lives here,
+   so the whole look can be re-themed from this single file.
+   ========================================================================== */
+
+:root {
+  color-scheme: dark;
+
+  /* Surfaces */
+  --bg: #0c0a09;
+  --bg-elevated: #141110;
+  --surface: #1c1917;
+  --surface-2: #292524;
+
+  /* Text */
+  --text: #f5f0e8;
+  --text-muted: #a8a29e;
+  --text-faint: #78716c;
+
+  /* Accents */
+  --accent: #ff7a45;
+  --accent-2: #ffc857;
+  --accent-soft: rgba(255, 122, 69, 0.12);
+  --accent-glow: rgba(255, 122, 69, 0.35);
+  --gradient: linear-gradient(120deg, var(--accent) 0%, var(--accent-2) 100%);
+
+  /* Lines */
+  --border: rgba(245, 240, 232, 0.08);
+  --border-strong: rgba(245, 240, 232, 0.16);
+
+  /* Typography */
+  --font-display: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-body: 'Manrope', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'Cascadia Code', Consolas, monospace;
+
+  /* Fluid type scale (min at 360px, max at 1440px) */
+  --fs-xs: 0.78rem;
+  --fs-sm: 0.875rem;
+  --fs-base: clamp(0.98rem, 0.94rem + 0.2vw, 1.06rem);
+  --fs-lg: clamp(1.1rem, 1.02rem + 0.35vw, 1.3rem);
+  --fs-xl: clamp(1.5rem, 1.2rem + 1.2vw, 2.2rem);
+  --fs-hero: clamp(2.8rem, 1.6rem + 6vw, 6.5rem);
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+  --space-9: 7rem;
+  --gutter: clamp(1.25rem, 0.8rem + 3vw, 4.5rem);
+
+  /* Shape */
+  --radius-sm: 8px;
+  --radius: 14px;
+  --radius-pill: 999px;
+
+  /* Layout */
+  --sidebar-w: 320px;
+  --content-max: 860px;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 180ms;
+  --dur: 320ms;
+  --dur-slow: 800ms;
+}
