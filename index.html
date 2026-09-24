@@ -321,6 +321,155 @@
           </div>
         </section>
 
+        <!-- ------------------------------------------------------- 04 PROJECTS -->
+        <section class="section" id="projects" aria-labelledby="projects-title">
+          <header class="section__head reveal">
+            <span class="section__num">04</span>
+            <h2 class="section__title" id="projects-title">Projects</h2>
+          </header>
+
+          <!--
+            To add a project, copy one <article class="project"> block below.
+            - Add "project--featured" to make a card span the full width.
+            - Remove the <ul class="project__links"> if the repository is private.
+          -->
+          <div class="projects">
+            <!-- Breezy -->
+            <article class="project project--featured reveal">
+              <div class="project__top">
+                <svg class="project__icon" aria-hidden="true"><use href="#i-code" /></svg>
+                <ul class="project__links">
+                  <li>
+                    <a href="https://github.com/DAD-groupe-2aix" target="_blank" rel="noopener" aria-label="Breezy on GitHub">
+                      <svg aria-hidden="true"><use href="#i-github" /></svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <p class="project__meta">Team project · 2026 · Featured</p>
+              <h3 class="project__title">
+                <a href="https://github.com/DAD-groupe-2aix" target="_blank" rel="noopener">Breezy — Microservices Social Platform</a>
+              </h3>
+              <p class="project__desc">
+                A social network built as independent services: <strong>authentication</strong>
+                (register, login, JWT), <strong>users</strong> (profiles, follow/unfollow, feed) and
+                <strong>posts</strong> (CRUD, likes, comments). The services sit behind an NGINX
+                gateway and run with Docker Compose. JWT authentication is stateless and shared
+                across services, and a Next.js frontend talks to them through the gateway.
+              </p>
+              <ul class="tags" aria-label="Technologies">
+                <li>Node.js</li><li>Express</li><li>MongoDB</li><li>JWT</li>
+                <li>Next.js</li><li>React</li><li>Docker</li><li>NGINX</li>
+              </ul>
+              <ul class="project__repos" aria-label="Repositories">
+                <li><a href="https://github.com/DAD-groupe-2aix/breezy-auth-service" target="_blank" rel="noopener">auth-service <svg aria-hidden="true"><use href="#i-external" /></svg></a></li>
+                <li><a href="https://github.com/DAD-groupe-2aix/breezy-front" target="_blank" rel="noopener">front <svg aria-hidden="true"><use href="#i-external" /></svg></a></li>
+                <li><a href="https://github.com/DAD-groupe-2aix/breezy-infra" target="_blank" rel="noopener">infra <svg aria-hidden="true"><use href="#i-external" /></svg></a></li>
+              </ul>
+            </article>
+
+            <!-- EasySave -->
+            <article class="project reveal">
+              <div class="project__top">
+                <svg class="project__icon" aria-hidden="true"><use href="#i-code" /></svg>
+                <ul class="project__links">
+                  <li>
+                    <a href="https://github.com/Groupe1-Prosoft/EasySave" target="_blank" rel="noopener" aria-label="EasySave on GitHub">
+                      <svg aria-hidden="true"><use href="#i-github" /></svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <p class="project__meta">Team of 4 · Desktop app</p>
+              <h3 class="project__title">
+                <a href="https://github.com/Groupe1-Prosoft/EasySave" target="_blank" rel="noopener">EasySave — Backup Software</a>
+              </h3>
+              <p class="project__desc">
+                Backup software built in three versions: a console app, then an MVVM desktop interface
+                with file encryption, then parallel jobs with priorities and centralized logging. It
+                supports full and differential backups, real-time progress tracking, English and
+                French, and its own logging library (EasyLog).
+              </p>
+              <ul class="tags" aria-label="Technologies">
+                <li>C#</li><li>.NET 8</li><li>Avalonia</li><li>MVVM</li><li>Design patterns</li>
+              </ul>
+            </article>
+
+            <!-- Internship platform (projet-WEB) -->
+            <article class="project reveal">
+              <div class="project__top">
+                <svg class="project__icon" aria-hidden="true"><use href="#i-code" /></svg>
+                <ul class="project__links">
+                  <li>
+                    <a href="https://github.com/rayene00/projet-WEB" target="_blank" rel="noopener" aria-label="Internship Search Platform on GitHub">
+                      <svg aria-hidden="true"><use href="#i-github" /></svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <p class="project__meta">Team project · Web app</p>
+              <h3 class="project__title">
+                <a href="https://github.com/rayene00/projet-WEB" target="_blank" rel="noopener">Internship Search Platform</a>
+              </h3>
+              <p class="project__desc">
+                A web application that helps students find internships. Students can search offers,
+                view company pages, apply online and review companies. Students and pilots
+                (academic advisors) each have their own dashboard, and the app handles sign-up,
+                sign-in and password reset.
+              </p>
+              <ul class="tags" aria-label="Technologies">
+                <li>PHP</li><li>Laravel</li><li>Blade</li><li>MVC</li>
+              </ul>
+            </article>
+
+            <!-- VRPTW (repository not public yet) -->
+            <article class="project reveal">
+              <div class="project__top">
+                <svg class="project__icon" aria-hidden="true"><use href="#i-code" /></svg>
+                <span class="project__badge">Repo coming soon</span>
+              </div>
+              <p class="project__meta">2026 · Optimization</p>
+              <h3 class="project__title">Vehicle Routing with Time Windows</h3>
+              <p class="project__desc">
+                Implemented and compared four VRPTW solvers: a nearest-neighbor baseline, simulated
+                annealing, a genetic algorithm and a learned policy. I benchmarked solution quality
+                against runtime on different instance sizes to see which method works best at which
+                scale, and checked that results stayed stable over repeated runs.
+              </p>
+              <ul class="tags" aria-label="Technologies">
+                <li>Python</li><li>Metaheuristics</li><li>Deep learning</li>
+              </ul>
+            </article>
+
+            <!-- Network infrastructure (repository not public yet) -->
+            <article class="project reveal">
+              <div class="project__top">
+                <svg class="project__icon" aria-hidden="true"><use href="#i-code" /></svg>
+                <span class="project__badge">Repo coming soon</span>
+              </div>
+              <p class="project__meta">2025 · Networking</p>
+              <h3 class="project__title">Virtualized Corporate Network</h3>
+              <p class="project__desc">
+                Designed and deployed a segmented company network in virtual machines: a pfSense
+                firewall and router, a Windows Server 2022 domain controller for DNS and DHCP, an
+                Ubuntu server and Windows 11 clients. I configured routing, firewall rules and name
+                resolution from end to end, and fixed resolver and gateway errors to get internal
+                and outbound traffic working.
+              </p>
+              <ul class="tags" aria-label="Technologies">
+                <li>pfSense</li><li>Windows Server</li><li>Ubuntu</li><li>DNS / DHCP</li>
+              </ul>
+            </article>
+          </div>
+
+          <p class="projects__more reveal">
+            <a class="btn btn--ghost" href="https://github.com/rayene00" target="_blank" rel="noopener">
+              <svg aria-hidden="true"><use href="#i-github" /></svg>
+              More on GitHub
+            </a>
+          </p>
+        </section>
+
         <!-- SECTIONS -->
       </main>
     </div>
