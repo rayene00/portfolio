@@ -8,6 +8,7 @@ import './styles/layout.css';
 import './styles/sections.css';
 import './styles/projects.css';
 
-import { initMenu } from './ui.js';
+import { initMenu, initYear } from './ui.js';
 
 initMenu();
+initYear();

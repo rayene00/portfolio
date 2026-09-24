@@ -198,6 +198,75 @@
   margin: 0;
 }
 
+/* ---------- Contact ---------- */
+
+.contact__card {
+  position: relative;
+  overflow: hidden;
+  padding: var(--space-7) var(--space-6);
+  border: 1px solid rgba(255, 122, 69, 0.25);
+  border-radius: calc(var(--radius) + 6px);
+  background:
+    radial-gradient(80% 120% at 100% 0%, rgba(255, 200, 87, 0.12), transparent 60%),
+    radial-gradient(70% 120% at 0% 100%, rgba(255, 122, 69, 0.14), transparent 60%),
+    rgba(28, 25, 23, 0.7);
+}
+
+.contact__kicker {
+  margin-bottom: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  color: var(--accent);
+}
+
+.contact__title {
+  max-width: 18ch;
+  font-size: clamp(1.8rem, 1.2rem + 2.4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+}
+
+.contact__text {
+  max-width: 52ch;
+  margin: var(--space-5) 0 var(--space-6);
+}
+
+.contact__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+@media (max-width: 480px) {
+  .contact__card {
+    padding: var(--space-6) var(--space-5);
+  }
+
+  .contact__actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ---------- Footer ---------- */
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-2) var(--space-5);
+  padding-top: var(--space-6);
+  margin-top: var(--space-6);
+  border-top: 1px solid var(--border);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--text-faint);
+}
+
+.footer p {
+  margin: 0;
+}
+
 /* ---------- Skills ---------- */
 
 .skills {

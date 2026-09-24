@@ -2,6 +2,13 @@
  * DOM interactions that don't depend on WebGL.
  */
 
+/** Keeps the copyright year in the footer current. */
+export function initYear() {
+  document.querySelectorAll('[data-year]').forEach((el) => {
+    el.textContent = String(new Date().getFullYear());
+  });
+}
+
 /** Mobile menu: toggles the sidebar body and closes it after a link is chosen. */
 export function initMenu() {
   const sidebar = document.querySelector('.sidebar');
