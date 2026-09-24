@@ -44,7 +44,7 @@
         "worksFor": { "@type": "Organization", "name": "Sopra Steria" },
         "alumniOf": { "@type": "CollegeOrUniversity", "name": "CESI Engineering School" },
         "address": { "@type": "PostalAddress", "addressLocality": "Marseille", "addressCountry": "FR" },
-        "knowsLanguage": ["French", "English", "Arabic"],
+        "knowsLanguage": ["French", "English"],
         "sameAs": ["https://github.com/rayene00", "https://www.linkedin.com/in/rayene-medjtoh/"]
       }
     </script>
@@ -102,8 +102,8 @@
           </p>
           <p class="about-text">
             I'm looking for a <span class="highlight">software engineering internship in the US or
-            Canada for Summer 2027</span> (July to September) and I'm ready to relocate. I speak
-            French, English and Arabic, and outside of code I compete in amateur boxing.
+            Canada for Summer 2027</span> (May to September) and I'm ready to relocate. I speak
+            French and English, and outside of code I compete in amateur boxing.
           </p>
         </section>
 
@@ -329,6 +329,43 @@
                 <span class="tech-tag">Ubuntu</span>
               </div>
             </div>
+
+            <a class="project-card" href="https://github.com/Estebge/Systeme-embarque" target="_blank" rel="noopener">
+              <h3 class="project-title">Embedded Weather Station</h3>
+              <p class="project-description">
+                Built the Arduino Uno firmware, in a team of five, for a shipboard weather station
+                prototype that measures, timestamps and logs environmental data to an SD card.
+              </p>
+              <ul class="project-description">
+                <li>Five-mode state machine (startup, standard, economy, configuration, maintenance) driven by button interrupts.</li>
+                <li>Temperature, pressure, humidity, light, GPS and real-time clock acquisition.</li>
+                <li>CSV logging to SD, serial configuration console and LED-coded fault diagnostics.</li>
+                <li>Designed in UML first, then fitted into 32 KB of program memory.</li>
+              </ul>
+              <div class="tech-stack">
+                <span class="tech-tag">C++</span>
+                <span class="tech-tag">Arduino</span>
+                <span class="tech-tag">I²C / SPI</span>
+                <span class="tech-tag">UML</span>
+              </div>
+            </a>
+
+            <a class="project-card" href="https://github.com/rayene00/portfolio" target="_blank" rel="noopener">
+              <h3 class="project-title">This Three.js Portfolio Website</h3>
+              <p class="project-description">
+                Designed and built this site with Vite and Three.js. The intro is a WebGL node-network
+                sphere that the camera dives into as you scroll, then settles into an ambient
+                background behind the content. The 3D scene is lazy-loaded so the page renders
+                first, lightens on small screens, respects reduced-motion settings and pauses when
+                the tab is hidden. Deployed to GitHub Pages with a GitHub Actions workflow.
+              </p>
+              <div class="tech-stack">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Three.js</span>
+                <span class="tech-tag">WebGL</span>
+                <span class="tech-tag">Vite</span>
+              </div>
+            </a>
           </div>
         </section>
       </main>
