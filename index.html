@@ -18,7 +18,136 @@
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- SECTIONS -->
+    <!-- Icon sprite: each icon is defined once and reused with <use href="#i-…"> -->
+    <svg width="0" height="0" class="sr-only" aria-hidden="true">
+      <symbol id="i-github" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2.02c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.74.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z" />
+      </symbol>
+      <symbol id="i-linkedin" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z" />
+      </symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2.5" y="4.5" width="19" height="15" rx="2" />
+        <path d="m22 7-10 6.5L2 7" />
+      </symbol>
+      <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16" />
+      </symbol>
+      <symbol id="i-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 4h6v6M20 4 10 14M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" />
+      </symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 12h14m0 0-6-6m6 6-6 6" />
+      </symbol>
+      <symbol id="i-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m8 8-4 4 4 4m8-8 4 4-4 4M14 4l-4 16" />
+      </symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+        <path d="M4 7h16M4 12h16M4 17h10" />
+      </symbol>
+    </svg>
+
+    <!-- WebGL backdrop (drawn by src/scene.js) + veil that darkens it on scroll -->
+    <canvas id="scene" class="scene" aria-hidden="true"></canvas>
+    <div class="scene-veil" aria-hidden="true"></div>
+
+    <!-- ================================================================
+         HERO
+         ================================================================ -->
+    <header class="hero" id="top">
+      <div class="hero__inner">
+        <p class="hero__eyebrow">
+          <span class="pulse" aria-hidden="true"></span>
+          Open to Summer 2027 internships · US &amp; Canada
+        </p>
+        <h1 class="hero__title">
+          Rayene <span class="hero__title-accent">Medjtoh</span>
+        </h1>
+        <p class="hero__role">
+          Computer engineering student at CESI and software engineer at Sopra Steria. I build backend
+          systems, data workflows and distributed services.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#projects">
+            View my work
+            <svg aria-hidden="true"><use href="#i-arrow" /></svg>
+          </a>
+          <a class="btn btn--ghost" href="RayeneMedjtoh_Resume.pdf" target="_blank" rel="noopener">
+            <svg aria-hidden="true"><use href="#i-download" /></svg>
+            Resume
+          </a>
+        </div>
+      </div>
+
+      <a class="hero__scroll" href="#about" aria-label="Scroll to the About section">
+        <span>scroll</span>
+        <span class="hero__scroll-line" aria-hidden="true"></span>
+      </a>
+    </header>
+
+    <div class="layout">
+      <!-- ================================================================
+           SIDEBAR — sticky on desktop, collapsible top bar on mobile
+           ================================================================ -->
+      <aside class="sidebar">
+        <div class="sidebar__head">
+          <a class="brand" href="#top" aria-label="Back to top">
+            <span class="brand__mark" aria-hidden="true">RM</span>
+            <span class="brand__text">
+              <strong>Rayene Medjtoh</strong>
+              <span>Software Engineer · Student</span>
+            </span>
+          </a>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="sidebar-body">
+            <span class="sr-only">Toggle navigation</span>
+            <svg aria-hidden="true"><use href="#i-menu" /></svg>
+          </button>
+        </div>
+
+        <div class="sidebar__body" id="sidebar-body">
+          <p class="sidebar__intro">
+            I like the unglamorous parts of software: data that has to be right, workflows that must
+            not drop a request, services that have to talk to each other.
+          </p>
+
+          <nav class="nav" aria-label="Sections">
+            <span class="nav__rail" aria-hidden="true"><span class="nav__rail-fill"></span></span>
+            <ol>
+              <li><a class="nav__link" href="#about"><span class="nav__num">01</span><span class="nav__label">About</span></a></li>
+              <li><a class="nav__link" href="#experience"><span class="nav__num">02</span><span class="nav__label">Experience</span></a></li>
+              <li><a class="nav__link" href="#skills"><span class="nav__num">03</span><span class="nav__label">Skills</span></a></li>
+              <li><a class="nav__link" href="#projects"><span class="nav__num">04</span><span class="nav__label">Projects</span></a></li>
+              <li><a class="nav__link" href="#contact"><span class="nav__num">05</span><span class="nav__label">Contact</span></a></li>
+            </ol>
+          </nav>
+
+          <ul class="socials" aria-label="Social links">
+            <li>
+              <a href="https://github.com/rayene00" target="_blank" rel="noopener" aria-label="GitHub">
+                <svg aria-hidden="true"><use href="#i-github" /></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/rayene-medjtoh/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg aria-hidden="true"><use href="#i-linkedin" /></svg>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:rayene.mjth@gmail.com" aria-label="Email">
+                <svg aria-hidden="true"><use href="#i-mail" /></svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- ================================================================
+           MAIN CONTENT
+           ================================================================ -->
+      <main class="content" id="main">
+        <!-- SECTIONS -->
+      </main>
+    </div>
 
     <script type="module" src="/src/main.js"></script>
   </body>
