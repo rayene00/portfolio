@@ -48,6 +48,14 @@
         "sameAs": ["https://github.com/rayene00", "https://www.linkedin.com/in/rayene-medjtoh/"]
       }
     </script>
+
+    <!-- Umami analytics (cookieless). data-domains keeps local dev visits out of the stats. -->
+    <script
+      defer
+      src="https://cloud.umami.is/script.js"
+      data-website-id="963f76a4-a966-4ab7-a953-e4a628c42f4c"
+      data-domains="rayene00.github.io"
+    ></script>
   </head>
   <body>
     <!-- Intro: the 3D scene (src/scene.js) fills the first screen -->
@@ -75,10 +83,10 @@
         </ul>
 
         <div class="social-links">
-          <a class="social-link" href="https://github.com/rayene00" target="_blank" rel="noopener">GitHub</a>
-          <a class="social-link" href="https://www.linkedin.com/in/rayene-medjtoh/" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="social-link" href="mailto:rayene.mjth@gmail.com">Email</a>
-          <a class="social-link" href="RayeneMedjtoh_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+          <a class="social-link" data-umami-event="click-github" href="https://github.com/rayene00" target="_blank" rel="noopener">GitHub</a>
+          <a class="social-link" data-umami-event="click-linkedin" href="https://www.linkedin.com/in/rayene-medjtoh/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="social-link" data-umami-event="click-email" href="mailto:rayene.mjth@gmail.com">Email</a>
+          <a class="social-link" data-umami-event="click-resume" href="RayeneMedjtoh_Resume.pdf" target="_blank" rel="noopener">Resume</a>
         </div>
       </nav>
 
@@ -248,7 +256,7 @@
           <h2 class="section-title">Featured Projects</h2>
 
           <div class="projects-grid">
-            <a class="project-card" href="https://github.com/DAD-groupe-2aix" target="_blank" rel="noopener">
+            <a class="project-card" data-umami-event="project-breezy" href="https://github.com/DAD-groupe-2aix" target="_blank" rel="noopener">
               <h3 class="project-title">Breezy - Microservices Social Platform</h3>
               <p class="project-description">
                 Built a social network as independent Node.js services for authentication, users and
@@ -269,7 +277,7 @@
               </div>
             </a>
 
-            <a class="project-card" href="https://github.com/Groupe1-Prosoft/EasySave" target="_blank" rel="noopener">
+            <a class="project-card" data-umami-event="project-easysave" href="https://github.com/Groupe1-Prosoft/EasySave" target="_blank" rel="noopener">
               <h3 class="project-title">EasySave - Backup Software</h3>
               <p class="project-description">
                 Developed backup software in a team of four, delivered in three versions: a console
@@ -285,7 +293,7 @@
               </div>
             </a>
 
-            <a class="project-card" href="https://github.com/rayene00/projet-WEB" target="_blank" rel="noopener">
+            <a class="project-card" data-umami-event="project-internship-platform" href="https://github.com/rayene00/projet-WEB" target="_blank" rel="noopener">
               <h3 class="project-title">Internship Search Platform</h3>
               <p class="project-description">
                 Built a web application that helps students find internships: search offers, browse
@@ -330,7 +338,7 @@
               </div>
             </div>
 
-            <a class="project-card" href="https://github.com/Estebge/Systeme-embarque" target="_blank" rel="noopener">
+            <a class="project-card" data-umami-event="project-weather-station" href="https://github.com/Estebge/Systeme-embarque" target="_blank" rel="noopener">
               <h3 class="project-title">Embedded Weather Station</h3>
               <p class="project-description">
                 Built the Arduino Uno firmware, in a team of five, for a shipboard weather station
@@ -350,7 +358,7 @@
               </div>
             </a>
 
-            <a class="project-card" href="https://github.com/rayene00/portfolio" target="_blank" rel="noopener">
+            <a class="project-card" data-umami-event="project-portfolio" href="https://github.com/rayene00/portfolio" target="_blank" rel="noopener">
               <h3 class="project-title">This Three.js Portfolio Website</h3>
               <p class="project-description">
                 Designed and built this site with Vite and Three.js. The intro is a WebGL node-network
