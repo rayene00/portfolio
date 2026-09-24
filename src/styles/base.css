@@ -173,6 +173,29 @@ strong {
   transform: translateY(-2px);
 }
 
+/* Scroll reveal — only hidden when JS is running (html.js), so content
+   is always visible without JavaScript. Uses an animation on `translate`
+   so it never clashes with components' own `transform`/`transition` hovers. */
+.js .reveal {
+  opacity: 0;
+}
+
+.js .reveal.is-visible {
+  opacity: 1;
+  animation: reveal var(--dur-slow) var(--ease-out) var(--delay, 0ms) both;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    translate: 0 24px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
 /* Respect the user's motion preferences */
 @media (prefers-reduced-motion: reduce) {
   html {

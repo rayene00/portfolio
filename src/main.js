@@ -8,10 +8,23 @@ import './styles/layout.css';
 import './styles/sections.css';
 import './styles/projects.css';
 
-import { initMenu, initScrollProgress, initYear } from './ui.js';
+import {
+  initActiveNav,
+  initCardSpotlight,
+  initMenu,
+  initReveal,
+  initScrollProgress,
+  initYear,
+} from './ui.js';
+
+// Lets CSS know JS is running (reveal animations are skipped without it).
+document.documentElement.classList.add('js');
 
 const getProgress = initScrollProgress();
 initMenu();
+initReveal();
+initActiveNav();
+initCardSpotlight();
 initYear();
 
 // Three.js is loaded in a separate chunk so the page content renders first.
