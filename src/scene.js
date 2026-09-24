@@ -27,8 +27,8 @@ import {
   WebGLRenderer,
 } from 'three';
 
-const ACCENT = new Color('#ff7a45');
-const ACCENT_2 = new Color('#ffc857');
+const ACCENT = new Color('#7c6cf2');
+const ACCENT_2 = new Color('#c4b5fd');
 
 const RADIUS = 60;
 const CAMERA_START_Z = 170;
