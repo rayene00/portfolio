@@ -8,24 +8,13 @@
  */
 export function initScrollProgress() {
   const root = document.documentElement;
-  const content = document.querySelector('.content');
   let progress = 0;
   let ticking = false;
 
-  const clamp01 = (value) => Math.min(Math.max(value, 0), 1);
-
   const update = () => {
     ticking = false;
-    progress = clamp01(window.scrollY / window.innerHeight);
+    progress = Math.min(Math.max(window.scrollY / window.innerHeight, 0), 1);
     root.style.setProperty('--p', progress.toFixed(3));
-
-    // Reading progress through the main content, drives the sidebar rail (`--read`)
-    if (content) {
-      const start = content.offsetTop;
-      const range = content.offsetHeight - window.innerHeight;
-      const read = range > 0 ? clamp01((window.scrollY - start) / range) : 0;
-      root.style.setProperty('--read', read.toFixed(3));
-    }
   };
 
   const request = () => {
@@ -99,17 +88,6 @@ export function initActiveNav() {
   links.forEach((_, id) => {
     const section = document.getElementById(id);
     if (section) observer.observe(section);
-  });
-}
-
-/** Moves the project cards' radial spotlight to follow the pointer. */
-export function initCardSpotlight() {
-  document.querySelectorAll('.project').forEach((card) => {
-    card.addEventListener('pointermove', (event) => {
-      const rect = card.getBoundingClientRect();
-      card.style.setProperty('--mx', `${event.clientX - rect.left}px`);
-      card.style.setProperty('--my', `${event.clientY - rect.top}px`);
-    });
   });
 }
 

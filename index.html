@@ -82,9 +82,6 @@
       <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
         <path d="M5 12h14m0 0-6-6m6 6-6 6" />
       </symbol>
-      <symbol id="i-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-        <path d="m8 8-4 4 4 4m8-8 4 4-4 4M14 4l-4 16" />
-      </symbol>
       <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
         <path d="M4 7h16M4 12h16M4 17h10" />
       </symbol>
@@ -99,17 +96,13 @@
          ================================================================ -->
     <header class="hero" id="top">
       <div class="hero__inner">
-        <p class="hero__eyebrow">
-          <span class="pulse" aria-hidden="true"></span>
-          Open to Summer 2027 internships · US &amp; Canada
-        </p>
-        <h1 class="hero__title">
-          Rayene <span class="hero__title-accent">Medjtoh</span>
-        </h1>
+        <p class="hero__eyebrow">Hi, my name is</p>
+        <h1 class="hero__title">Rayene <span class="hero__title-accent">Medjtoh</span></h1>
         <p class="hero__role">
-          Computer engineering student at CESI and software engineer at Sopra Steria. I build backend
-          systems, data workflows and distributed services.
+          Software engineering student at CESI and work-study developer at Sopra Steria. I build
+          backend systems, data workflows and distributed services.
         </p>
+        <p class="hero__status">Open to Summer 2027 internships in the US &amp; Canada.</p>
         <div class="hero__actions">
           <a class="btn btn--primary" href="#projects">
             View my work
@@ -123,7 +116,6 @@
       </div>
 
       <a class="hero__scroll" href="#about" aria-label="Scroll to the About section">
-        <span>scroll</span>
         <span class="hero__scroll-line" aria-hidden="true"></span>
       </a>
     </header>
@@ -134,12 +126,9 @@
            ================================================================ -->
       <aside class="sidebar">
         <div class="sidebar__head">
-          <a class="brand" href="#top" aria-label="Back to top">
-            <span class="brand__mark" aria-hidden="true">RM</span>
-            <span class="brand__text">
-              <strong>Rayene Medjtoh</strong>
-              <span>Software Engineer · Student</span>
-            </span>
+          <a class="profile" href="#top" aria-label="Back to top">
+            <strong class="profile__name">Rayene Medjtoh</strong>
+            <span class="profile__title">Software Engineering Student</span>
           </a>
           <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="sidebar-body">
             <span class="sr-only">Toggle navigation</span>
@@ -149,37 +138,23 @@
 
         <div class="sidebar__body" id="sidebar-body">
           <p class="sidebar__intro">
-            I like the unglamorous parts of software: data that has to be right, workflows that must
-            not drop a request, services that have to talk to each other.
+            Building reliable backends, data workflows and services that talk to each other.
           </p>
 
           <nav class="nav" aria-label="Sections">
-            <span class="nav__rail" aria-hidden="true"><span class="nav__rail-fill"></span></span>
-            <ol>
-              <li><a class="nav__link" href="#about"><span class="nav__num">01</span><span class="nav__label">About</span></a></li>
-              <li><a class="nav__link" href="#experience"><span class="nav__num">02</span><span class="nav__label">Experience</span></a></li>
-              <li><a class="nav__link" href="#skills"><span class="nav__num">03</span><span class="nav__label">Skills</span></a></li>
-              <li><a class="nav__link" href="#projects"><span class="nav__num">04</span><span class="nav__label">Projects</span></a></li>
-              <li><a class="nav__link" href="#contact"><span class="nav__num">05</span><span class="nav__label">Contact</span></a></li>
-            </ol>
+            <ul>
+              <li><a class="nav__link" href="#about">About</a></li>
+              <li><a class="nav__link" href="#experience">Experience</a></li>
+              <li><a class="nav__link" href="#skills">Skills</a></li>
+              <li><a class="nav__link" href="#projects">Projects</a></li>
+              <li><a class="nav__link" href="#contact">Contact</a></li>
+            </ul>
           </nav>
 
           <ul class="socials" aria-label="Social links">
-            <li>
-              <a href="https://github.com/rayene00" target="_blank" rel="noopener" aria-label="GitHub">
-                <svg aria-hidden="true"><use href="#i-github" /></svg>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/rayene-medjtoh/" target="_blank" rel="noopener" aria-label="LinkedIn">
-                <svg aria-hidden="true"><use href="#i-linkedin" /></svg>
-              </a>
-            </li>
-            <li>
-              <a href="mailto:rayene.mjth@gmail.com" aria-label="Email">
-                <svg aria-hidden="true"><use href="#i-mail" /></svg>
-              </a>
-            </li>
+            <li><a href="https://github.com/rayene00" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/rayene-medjtoh/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="mailto:rayene.mjth@gmail.com">Email</a></li>
           </ul>
         </div>
       </aside>
@@ -188,296 +163,224 @@
            MAIN CONTENT
            ================================================================ -->
       <main class="content" id="main">
-        <!-- ---------------------------------------------------------- 01 ABOUT -->
+        <!-- ------------------------------------------------------------ ABOUT -->
         <section class="section" id="about" aria-labelledby="about-title">
-          <header class="section__head reveal">
-            <span class="section__num">01</span>
-            <h2 class="section__title" id="about-title">About me</h2>
-          </header>
+          <h2 class="section__title reveal" id="about-title">About Me</h2>
 
-          <div class="about">
-            <div class="about__text reveal">
-              <p>
-                I'm a fourth-year <strong>computer engineering student at CESI</strong> in
-                Aix-en-Provence, France, in a five-year integrated M.Eng. program (graduating
-                September 2028). My coursework covers algorithms and complexity, distributed systems,
-                databases, operations research and network architecture.
-              </p>
-              <p>
-                Alongside my degree, I work as a <strong>software engineer at Sopra Steria</strong>
-                in a work-study program. I build and maintain Java components on an enterprise master
-                data management platform for an industrial client. Day to day, that means backend
-                development, workflow design and fixing production issues in a small Agile team.
-              </p>
-              <p>
-                I'm looking for a <strong>software engineering internship in the US or Canada for
-                Summer 2027</strong> (July to September), and I'm ready to relocate for it. I'm a
-                French citizen, eligible for a J-1 exchange visa and for Canada's International
-                Experience Canada work permit.
-              </p>
-              <p>Outside of code, I compete in amateur boxing.</p>
-            </div>
-
-            <dl class="facts">
-              <div class="fact reveal">
-                <dt>Based in</dt>
-                <dd>Marseille, France</dd>
-              </div>
-              <div class="fact reveal">
-                <dt>Degree</dt>
-                <dd>M.Eng. Computer Engineering, CESI · 2028</dd>
-              </div>
-              <div class="fact reveal">
-                <dt>Currently</dt>
-                <dd>Software Engineer, Sopra Steria</dd>
-              </div>
-              <div class="fact reveal">
-                <dt>Languages</dt>
-                <dd>French · English (TOEIC 800) · Arabic</dd>
-              </div>
-              <div class="fact reveal">
-                <dt>Work eligibility</dt>
-                <dd>J-1 (US) · IEC (Canada)</dd>
-              </div>
-              <div class="fact fact--accent reveal">
-                <dt>Available</dt>
-                <dd>July – September 2027</dd>
-              </div>
-            </dl>
+          <div class="about reveal">
+            <p>
+              I'm a fourth-year computer engineering student at <span class="hl">CESI</span> in
+              Aix-en-Provence, France, in a five-year integrated M.Eng. program graduating in
+              September 2028. My coursework covers algorithms and complexity, distributed systems,
+              databases, operations research and network architecture.
+            </p>
+            <p>
+              Alongside my degree, I work as a software engineer at
+              <span class="hl">Sopra Steria</span> in a work-study program. I build and maintain Java
+              components on an enterprise master data management platform for an industrial client:
+              backend development, workflow design and fixing production issues in a small
+              <span class="hl">Agile</span> team.
+            </p>
+            <p>
+              I'm looking for a <span class="hl">software engineering internship in the US or Canada
+              for Summer 2027</span> (July to September) and I'm ready to relocate. I'm a French
+              citizen, eligible for a J-1 exchange visa and for Canada's International Experience
+              Canada work permit. I speak French, English (TOEIC 800) and Arabic.
+            </p>
+            <p>Outside of code, I compete in amateur boxing.</p>
           </div>
         </section>
 
-        <!-- ----------------------------------------------------- 02 EXPERIENCE -->
+        <!-- ------------------------------------------------------- EXPERIENCE -->
         <section class="section" id="experience" aria-labelledby="experience-title">
-          <header class="section__head reveal">
-            <span class="section__num">02</span>
-            <h2 class="section__title" id="experience-title">Experience</h2>
-          </header>
+          <h2 class="section__title reveal" id="experience-title">Experience</h2>
 
-          <ol class="timeline">
-            <li class="timeline__item reveal">
-              <p class="timeline__date"><time datetime="2025-10">Oct 2025</time> — Present</p>
-              <h3 class="timeline__role">Software Engineer <span>· Sopra Steria</span></h3>
-              <p class="timeline__meta">Work-study program · Aix-en-Provence, France</p>
-              <ul class="timeline__points">
-                <li>
-                  Build and maintain Java components on a 10-model TIBCO EBX master data management
-                  platform for Arkema, a global specialty chemicals group, in a 4-person Agile team.
-                </li>
-                <li>
-                  Developed and debugged 20+ data-governance workflows. One fix was a
-                  premature-termination bug that dropped user submissions before they reached
-                  validation.
-                </li>
-                <li>
-                  Automated the anonymization of confidential records across 600+ tables. It
-                  replaced a manual, record-by-record process that slowed down every test-environment
-                  setup.
-                </li>
-                <li>
-                  Found and fixed the root cause of 60+ production defects reported by the client's
-                  business users, from array-bounds failures to node-resolution errors in the
-                  workflow engine.
-                </li>
-              </ul>
-              <ul class="tags" aria-label="Technologies">
-                <li>Java</li><li>TIBCO EBX</li><li>MDM</li><li>SQL</li><li>Agile</li>
-              </ul>
-            </li>
+          <article class="card exp reveal">
+            <header class="exp__head">
+              <div>
+                <h3 class="exp__role">Software Engineer (work-study)</h3>
+                <p class="exp__company">Sopra Steria · Aix-en-Provence, France</p>
+              </div>
+              <p class="exp__date"><time datetime="2025-10">Oct 2025</time> – Present</p>
+            </header>
+            <ul class="exp__points">
+              <li>
+                Build and maintain Java components on a 10-model <span class="hl">TIBCO EBX</span>
+                master data management platform for Arkema, a global specialty chemicals group, in a
+                4-person Agile team.
+              </li>
+              <li>
+                Developed and debugged <span class="hl">20+ data-governance workflows</span>, including
+                a premature-termination bug that dropped user submissions before they reached
+                validation.
+              </li>
+              <li>
+                Automated the anonymization of confidential records across
+                <span class="hl">600+ tables</span>, replacing a manual process that slowed down every
+                test-environment setup.
+              </li>
+              <li>
+                Found and fixed the root cause of <span class="hl">60+ production defects</span>
+                reported by the client's business users, from array-bounds failures to
+                node-resolution errors in the workflow engine.
+              </li>
+            </ul>
+            <ul class="tags" aria-label="Technologies">
+              <li>Java</li><li>TIBCO EBX</li><li>MDM</li><li>SQL</li><li>Agile</li>
+            </ul>
+          </article>
 
-            <li class="timeline__item reveal">
-              <p class="timeline__date"><time datetime="2025-04">Apr</time> — <time datetime="2025-07">Jul 2025</time></p>
-              <h3 class="timeline__role">Software Development Intern <span>· ArcelorMittal</span></h3>
-              <p class="timeline__meta">Internship · Fos-sur-Mer, France</p>
-              <ul class="timeline__points">
-                <li>
-                  Developed a configurable SQL Server monitoring service in C# (.NET). Site IT can
-                  define watch targets and alert thresholds without changing code.
-                </li>
-                <li>
-                  Migrated the real-time supervision interface for the steelworks' water discharge
-                  (flow, pH, temperature) onto the plant's certified IoT sensor database.
-                </li>
-                <li>
-                  Moved ASURE, the application that produces the plant's monthly environmental reports
-                  to the regulator, onto that same certified data source, and deployed Prometheus
-                  across environmental servers and workstations.
-                </li>
-              </ul>
-              <ul class="tags" aria-label="Technologies">
-                <li>C#</li><li>.NET</li><li>SQL Server</li><li>Prometheus</li><li>IoT</li>
-              </ul>
-            </li>
+          <article class="card exp reveal">
+            <header class="exp__head">
+              <div>
+                <h3 class="exp__role">Software Development Intern</h3>
+                <p class="exp__company">ArcelorMittal · Fos-sur-Mer, France</p>
+              </div>
+              <p class="exp__date"><time datetime="2025-04">Apr</time> – <time datetime="2025-07">Jul 2025</time></p>
+            </header>
+            <ul class="exp__points">
+              <li>
+                Developed a configurable <span class="hl">SQL Server monitoring service in C# (.NET)</span>:
+                site IT can define watch targets and alert thresholds without changing code.
+              </li>
+              <li>
+                Migrated the real-time supervision interface for the steelworks' water discharge
+                (flow, pH, temperature) onto the plant's certified IoT sensor database.
+              </li>
+              <li>
+                Moved ASURE, the application that produces the plant's monthly environmental reports
+                to the regulator, onto that same certified data source, and deployed
+                <span class="hl">Prometheus</span> across environmental servers and workstations.
+              </li>
+            </ul>
+            <ul class="tags" aria-label="Technologies">
+              <li>C#</li><li>.NET</li><li>SQL Server</li><li>Prometheus</li><li>IoT</li>
+            </ul>
+          </article>
 
-            <li class="timeline__item timeline__item--edu reveal">
-              <p class="timeline__date"><time datetime="2023-09">Sep 2023</time> — <time datetime="2028-09">Sep 2028</time></p>
-              <h3 class="timeline__role">M.Eng. Computer Engineering <span>· CESI Engineering School</span></h3>
-              <p class="timeline__meta">5-year integrated program (master's level) · Aix-en-Provence, France</p>
-              <p class="timeline__desc">
-                Operations research, metaheuristics, algorithms and complexity, distributed systems,
-                databases, network architecture.
-              </p>
-            </li>
-          </ol>
+          <article class="card exp reveal">
+            <header class="exp__head">
+              <div>
+                <h3 class="exp__role">M.Eng. Computer Engineering</h3>
+                <p class="exp__company">CESI Engineering School · Aix-en-Provence, France</p>
+              </div>
+              <p class="exp__date"><time datetime="2023-09">Sep 2023</time> – <time datetime="2028-09">Sep 2028</time></p>
+            </header>
+            <p class="exp__desc">
+              Five-year integrated program (master's level): operations research, metaheuristics,
+              algorithms and complexity, distributed systems, databases and network architecture.
+            </p>
+          </article>
         </section>
 
-        <!-- --------------------------------------------------------- 03 SKILLS -->
+        <!-- ----------------------------------------------------------- SKILLS -->
         <section class="section" id="skills" aria-labelledby="skills-title">
-          <header class="section__head reveal">
-            <span class="section__num">03</span>
-            <h2 class="section__title" id="skills-title">Skills</h2>
-          </header>
+          <h2 class="section__title reveal" id="skills-title">Skills</h2>
 
           <div class="skills">
-            <article class="skill-group reveal">
-              <h3 class="skill-group__title"><span>//</span> Languages</h3>
-              <ul class="chips">
+            <div class="skill-row reveal">
+              <h3 class="skill-row__title">Languages</h3>
+              <ul class="tags">
                 <li>Java</li><li>C#</li><li>C</li><li>C++</li><li>JavaScript</li>
                 <li>Python</li><li>SQL</li><li>HTML / CSS</li>
               </ul>
-            </article>
-
-            <article class="skill-group reveal">
-              <h3 class="skill-group__title"><span>//</span> Frameworks</h3>
-              <ul class="chips">
+            </div>
+            <div class="skill-row reveal">
+              <h3 class="skill-row__title">Frameworks</h3>
+              <ul class="tags">
                 <li>Spring</li><li>Node.js</li><li>Express</li><li>.NET</li>
                 <li>React</li><li>Redux</li><li>Mongoose</li>
               </ul>
-            </article>
-
-            <article class="skill-group reveal">
-              <h3 class="skill-group__title"><span>//</span> Platforms &amp; Data</h3>
-              <ul class="chips">
+            </div>
+            <div class="skill-row reveal">
+              <h3 class="skill-row__title">Platforms &amp; Data</h3>
+              <ul class="tags">
                 <li>TIBCO EBX (MDM)</li><li>Docker</li><li>NGINX</li><li>SQL Server</li>
                 <li>MongoDB</li><li>PostgreSQL</li><li>Linux</li><li>Windows Server</li>
                 <li>pfSense</li><li>Prometheus</li>
               </ul>
-            </article>
-
-            <article class="skill-group reveal">
-              <h3 class="skill-group__title"><span>//</span> Practices</h3>
-              <ul class="chips">
+            </div>
+            <div class="skill-row reveal">
+              <h3 class="skill-row__title">Tools &amp; Practices</h3>
+              <ul class="tags">
                 <li>Git</li><li>GitLab CI</li><li>Maven</li><li>REST API design</li>
                 <li>Agile / Scrum</li>
               </ul>
-            </article>
+            </div>
           </div>
         </section>
 
-        <!-- ------------------------------------------------------- 04 PROJECTS -->
+        <!-- --------------------------------------------------------- PROJECTS -->
         <section class="section" id="projects" aria-labelledby="projects-title">
-          <header class="section__head reveal">
-            <span class="section__num">04</span>
-            <h2 class="section__title" id="projects-title">Projects</h2>
-          </header>
+          <h2 class="section__title reveal" id="projects-title">Featured Projects</h2>
 
           <!--
-            To add a project, copy one <article class="project"> block below.
-            - Add "project--featured" to make a card span the full width.
-            - Remove the <ul class="project__links"> if the repository is private.
+            To add a project, copy one <article class="card project"> block below.
+            Remove the <p class="project__links"> if the repository is private.
           -->
           <div class="projects">
             <!-- Breezy -->
-            <article class="project project--featured reveal">
-              <div class="project__top">
-                <svg class="project__icon" aria-hidden="true"><use href="#i-code" /></svg>
-                <ul class="project__links">
-                  <li>
-                    <a href="https://github.com/DAD-groupe-2aix" target="_blank" rel="noopener" aria-label="Breezy on GitHub">
-                      <svg aria-hidden="true"><use href="#i-github" /></svg>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <p class="project__meta">Team project · 2026 · Featured</p>
-              <h3 class="project__title">
-                <a href="https://github.com/DAD-groupe-2aix" target="_blank" rel="noopener">Breezy — Microservices Social Platform</a>
-              </h3>
+            <article class="card project reveal">
+              <h3 class="project__title">Breezy: Microservices Social Platform</h3>
               <p class="project__desc">
-                A social network built as independent services: <strong>authentication</strong>
-                (register, login, JWT), <strong>users</strong> (profiles, follow/unfollow, feed) and
-                <strong>posts</strong> (CRUD, likes, comments). The services sit behind an NGINX
-                gateway and run with Docker Compose. JWT authentication is stateless and shared
-                across services, and a Next.js frontend talks to them through the gateway.
+                A social network built as independent services for authentication (JWT), users
+                (profiles, follows, feed) and posts (CRUD, likes, comments). The services sit behind
+                an <span class="hl">NGINX gateway</span>, run with <span class="hl">Docker Compose</span>
+                and share stateless JWT authentication. A Next.js frontend talks to them through the
+                gateway.
               </p>
               <ul class="tags" aria-label="Technologies">
-                <li>Node.js</li><li>Express</li><li>MongoDB</li><li>JWT</li>
-                <li>Next.js</li><li>React</li><li>Docker</li><li>NGINX</li>
+                <li>Node.js</li><li>Express</li><li>MongoDB</li><li>Next.js</li><li>Docker</li><li>NGINX</li>
               </ul>
-              <ul class="project__repos" aria-label="Repositories">
-                <li><a href="https://github.com/DAD-groupe-2aix/breezy-auth-service" target="_blank" rel="noopener">auth-service <svg aria-hidden="true"><use href="#i-external" /></svg></a></li>
-                <li><a href="https://github.com/DAD-groupe-2aix/breezy-front" target="_blank" rel="noopener">front <svg aria-hidden="true"><use href="#i-external" /></svg></a></li>
-                <li><a href="https://github.com/DAD-groupe-2aix/breezy-infra" target="_blank" rel="noopener">infra <svg aria-hidden="true"><use href="#i-external" /></svg></a></li>
-              </ul>
+              <p class="project__links">
+                <a href="https://github.com/DAD-groupe-2aix" target="_blank" rel="noopener">GitHub <svg aria-hidden="true"><use href="#i-external" /></svg></a>
+                <a href="https://github.com/DAD-groupe-2aix/breezy-auth-service" target="_blank" rel="noopener">auth-service <svg aria-hidden="true"><use href="#i-external" /></svg></a>
+                <a href="https://github.com/DAD-groupe-2aix/breezy-front" target="_blank" rel="noopener">front <svg aria-hidden="true"><use href="#i-external" /></svg></a>
+                <a href="https://github.com/DAD-groupe-2aix/breezy-infra" target="_blank" rel="noopener">infra <svg aria-hidden="true"><use href="#i-external" /></svg></a>
+              </p>
             </article>
 
             <!-- EasySave -->
-            <article class="project reveal">
-              <div class="project__top">
-                <svg class="project__icon" aria-hidden="true"><use href="#i-code" /></svg>
-                <ul class="project__links">
-                  <li>
-                    <a href="https://github.com/Groupe1-Prosoft/EasySave" target="_blank" rel="noopener" aria-label="EasySave on GitHub">
-                      <svg aria-hidden="true"><use href="#i-github" /></svg>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <p class="project__meta">Team of 4 · Desktop app</p>
-              <h3 class="project__title">
-                <a href="https://github.com/Groupe1-Prosoft/EasySave" target="_blank" rel="noopener">EasySave — Backup Software</a>
-              </h3>
+            <article class="card project reveal">
+              <h3 class="project__title">EasySave: Backup Software</h3>
               <p class="project__desc">
-                Backup software built in three versions: a console app, then an MVVM desktop interface
-                with file encryption, then parallel jobs with priorities and centralized logging. It
-                supports full and differential backups, real-time progress tracking, English and
-                French, and its own logging library (EasyLog).
+                Backup software built by a team of four in three versions: a console app, then an
+                <span class="hl">MVVM</span> desktop interface with file encryption, then parallel
+                jobs with priorities and centralized logging. Supports full and differential
+                backups, real-time progress and its own logging library.
               </p>
               <ul class="tags" aria-label="Technologies">
-                <li>C#</li><li>.NET 8</li><li>Avalonia</li><li>MVVM</li><li>Design patterns</li>
+                <li>C#</li><li>.NET 8</li><li>Avalonia</li><li>MVVM</li>
               </ul>
+              <p class="project__links">
+                <a href="https://github.com/Groupe1-Prosoft/EasySave" target="_blank" rel="noopener">GitHub <svg aria-hidden="true"><use href="#i-external" /></svg></a>
+              </p>
             </article>
 
             <!-- Internship platform (projet-WEB) -->
-            <article class="project reveal">
-              <div class="project__top">
-                <svg class="project__icon" aria-hidden="true"><use href="#i-code" /></svg>
-                <ul class="project__links">
-                  <li>
-                    <a href="https://github.com/rayene00/projet-WEB" target="_blank" rel="noopener" aria-label="Internship Search Platform on GitHub">
-                      <svg aria-hidden="true"><use href="#i-github" /></svg>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <p class="project__meta">Team project · Web app</p>
-              <h3 class="project__title">
-                <a href="https://github.com/rayene00/projet-WEB" target="_blank" rel="noopener">Internship Search Platform</a>
-              </h3>
+            <article class="card project reveal">
+              <h3 class="project__title">Internship Search Platform</h3>
               <p class="project__desc">
-                A web application that helps students find internships. Students can search offers,
-                view company pages, apply online and review companies. Students and pilots
-                (academic advisors) each have their own dashboard, and the app handles sign-up,
-                sign-in and password reset.
+                A web application that helps students find internships: search offers, browse
+                company pages, apply online and review companies. Students and academic advisors
+                each get their own dashboard, with sign-up, sign-in and password reset.
               </p>
               <ul class="tags" aria-label="Technologies">
                 <li>PHP</li><li>Laravel</li><li>Blade</li><li>MVC</li>
               </ul>
+              <p class="project__links">
+                <a href="https://github.com/rayene00/projet-WEB" target="_blank" rel="noopener">GitHub <svg aria-hidden="true"><use href="#i-external" /></svg></a>
+              </p>
             </article>
 
             <!-- VRPTW (repository not public yet) -->
-            <article class="project reveal">
-              <div class="project__top">
-                <svg class="project__icon" aria-hidden="true"><use href="#i-code" /></svg>
-                <span class="project__badge">Repo coming soon</span>
-              </div>
-              <p class="project__meta">2026 · Optimization</p>
+            <article class="card project reveal">
               <h3 class="project__title">Vehicle Routing with Time Windows</h3>
               <p class="project__desc">
-                Implemented and compared four VRPTW solvers: a nearest-neighbor baseline, simulated
-                annealing, a genetic algorithm and a learned policy. I benchmarked solution quality
-                against runtime on different instance sizes to see which method works best at which
-                scale, and checked that results stayed stable over repeated runs.
+                Implemented and compared four VRPTW solvers: a nearest-neighbor baseline,
+                <span class="hl">simulated annealing</span>, a <span class="hl">genetic algorithm</span>
+                and a learned policy. Benchmarked solution quality against runtime on different
+                instance sizes and checked stability over repeated runs.
               </p>
               <ul class="tags" aria-label="Technologies">
                 <li>Python</li><li>Metaheuristics</li><li>Deep learning</li>
@@ -485,19 +388,13 @@
             </article>
 
             <!-- Network infrastructure (repository not public yet) -->
-            <article class="project reveal">
-              <div class="project__top">
-                <svg class="project__icon" aria-hidden="true"><use href="#i-code" /></svg>
-                <span class="project__badge">Repo coming soon</span>
-              </div>
-              <p class="project__meta">2025 · Networking</p>
+            <article class="card project reveal">
               <h3 class="project__title">Virtualized Corporate Network</h3>
               <p class="project__desc">
-                Designed and deployed a segmented company network in virtual machines: a pfSense
-                firewall and router, a Windows Server 2022 domain controller for DNS and DHCP, an
-                Ubuntu server and Windows 11 clients. I configured routing, firewall rules and name
-                resolution from end to end, and fixed resolver and gateway errors to get internal
-                and outbound traffic working.
+                Designed and deployed a segmented company network in virtual machines: a
+                <span class="hl">pfSense</span> firewall and router, a Windows Server 2022 domain
+                controller for DNS and DHCP, an Ubuntu server and Windows 11 clients, with routing,
+                firewall rules and name resolution configured end to end.
               </p>
               <ul class="tags" aria-label="Technologies">
                 <li>pfSense</li><li>Windows Server</li><li>Ubuntu</li><li>DNS / DHCP</li>
@@ -506,31 +403,24 @@
           </div>
 
           <p class="projects__more reveal">
-            <a class="btn btn--ghost" href="https://github.com/rayene00" target="_blank" rel="noopener">
-              <svg aria-hidden="true"><use href="#i-github" /></svg>
-              More on GitHub
-            </a>
+            <a class="link" href="https://github.com/rayene00" target="_blank" rel="noopener">More on my GitHub →</a>
           </p>
         </section>
 
-        <!-- -------------------------------------------------------- 05 CONTACT -->
+        <!-- ---------------------------------------------------------- CONTACT -->
         <section class="section contact" id="contact" aria-labelledby="contact-title">
-          <header class="section__head reveal">
-            <span class="section__num">05</span>
-            <h2 class="section__title" id="contact-title">Contact</h2>
-          </header>
+          <h2 class="section__title reveal" id="contact-title">Get In Touch</h2>
 
-          <div class="contact__card reveal">
-            <p class="contact__kicker">What's next?</p>
-            <h3 class="contact__title">Let's work together in 2027.</h3>
-            <p class="contact__text">
-              I'm looking for a software engineering internship in the US or Canada from July to
-              September 2027. If you're hiring or want to talk, my inbox is always open.
+          <div class="contact reveal">
+            <p>
+              I'm looking for a software engineering internship in the US or Canada from
+              <span class="hl">July to September 2027</span>. If you're hiring or just want to talk,
+              my inbox is always open.
             </p>
             <div class="contact__actions">
               <a class="btn btn--primary" href="mailto:rayene.mjth@gmail.com">
                 <svg aria-hidden="true"><use href="#i-mail" /></svg>
-                rayene.mjth@gmail.com
+                Say hello
               </a>
               <a class="btn btn--ghost" href="https://www.linkedin.com/in/rayene-medjtoh/" target="_blank" rel="noopener">
                 <svg aria-hidden="true"><use href="#i-linkedin" /></svg>
@@ -545,11 +435,9 @@
         </section>
 
         <footer class="footer">
+          <p>Designed &amp; built by Rayene Medjtoh · <span data-year>2026</span></p>
           <p>
-            Designed &amp; built by Rayene Medjtoh · <span data-year>2026</span>
-          </p>
-          <p>
-            Vite + Three.js · Inspired by
+            Inspired by
             <a class="link" href="https://yuvrajgs.github.io/Portfolio/" target="_blank" rel="noopener">Yuvraj Singh's portfolio</a>
           </p>
         </footer>

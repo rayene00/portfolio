@@ -1,125 +1,21 @@
 /* ==========================================================================
-   Projects — bento grid of cards with a cursor-following spotlight
-   `--mx` / `--my` are set per card by src/ui.js on pointer move.
+   Projects — grid of equal cards
    ========================================================================== */
 
 .projects {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--space-4);
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+  gap: var(--space-5);
 }
 
 .project {
-  position: relative;
-  isolation: isolate;
   display: flex;
   flex-direction: column;
-  gap: var(--space-3);
-  padding: var(--space-6);
-  overflow: hidden;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: rgba(28, 25, 23, 0.6);
-  transition: transform var(--dur) var(--ease-out), border-color var(--dur);
-}
-
-/* Spotlight that follows the cursor */
-.project::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background: radial-gradient(
-    420px circle at var(--mx, 50%) var(--my, 0%),
-    rgba(255, 122, 69, 0.13),
-    transparent 60%
-  );
-  opacity: 0;
-  transition: opacity var(--dur);
-}
-
-.project:hover {
-  transform: translateY(-4px);
-  border-color: rgba(255, 122, 69, 0.35);
-}
-
-.project:hover::before {
-  opacity: 1;
-}
-
-.project--featured {
-  grid-column: 1 / -1;
-  background:
-    linear-gradient(135deg, rgba(255, 122, 69, 0.08), transparent 55%),
-    rgba(28, 25, 23, 0.6);
-}
-
-.project__top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: var(--space-2);
-}
-
-.project__icon {
-  width: 34px;
-  height: 34px;
-  color: var(--accent);
-}
-
-.project__links {
-  display: flex;
-  gap: var(--space-2);
-}
-
-.project__links a {
-  display: grid;
-  place-items: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  color: var(--text-muted);
-  transition: color var(--dur-fast), background-color var(--dur-fast);
-}
-
-.project__links a:hover {
-  color: var(--accent);
-  background: var(--accent-soft);
-}
-
-.project__links svg {
-  width: 20px;
-  height: 20px;
-}
-
-.project__badge {
-  padding: 0.25em 0.75em;
-  border: 1px dashed var(--border-strong);
-  border-radius: var(--radius-pill);
-  font-family: var(--font-mono);
-  font-size: var(--fs-xs);
-  color: var(--text-faint);
-}
-
-.project__meta {
-  margin: 0;
-  font-family: var(--font-mono);
-  font-size: var(--fs-xs);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--accent-2);
+  gap: var(--space-4);
 }
 
 .project__title {
   font-size: var(--fs-lg);
-}
-
-.project__title a {
-  transition: color var(--dur-fast);
-}
-
-.project__title a:hover {
-  color: var(--accent);
 }
 
 .project__desc {
@@ -128,59 +24,35 @@
   font-size: var(--fs-sm);
 }
 
-.project--featured .project__desc {
-  max-width: 70ch;
-  font-size: var(--fs-base);
-}
-
-.project .tags {
-  margin-top: var(--space-2);
-}
-
-/* Links to each repository of a multi-repo project */
-.project__repos {
+.project__links {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-2);
+  gap: var(--space-2) var(--space-4);
+  margin: 0;
   padding-top: var(--space-4);
-  margin-top: var(--space-2);
   border-top: 1px solid var(--border);
 }
 
-.project__repos a {
+.project__links a {
   display: inline-flex;
   align-items: center;
-  gap: 0.4em;
-  padding: 0.3em 0.8em;
-  border: 1px solid var(--border-strong);
-  border-radius: var(--radius-pill);
-  font-family: var(--font-mono);
+  gap: 0.35em;
   font-size: var(--fs-xs);
-  color: var(--text);
-  transition: border-color var(--dur-fast), color var(--dur-fast);
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: color var(--dur-fast);
 }
 
-.project__repos a:hover {
-  border-color: var(--accent);
+.project__links a:hover {
   color: var(--accent);
 }
 
-.project__repos svg {
+.project__links svg {
   width: 12px;
   height: 12px;
 }
 
 .projects__more {
   margin: var(--space-6) 0 0;
-  text-align: center;
-}
-
-@media (max-width: 720px) {
-  .projects {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .project {
-    padding: var(--space-5);
-  }
+  font-size: var(--fs-sm);
 }
