@@ -2,6 +2,35 @@
  * DOM interactions that don't depend on WebGL.
  */
 
+/**
+ * Tracks how far the intro (first viewport) has been scrolled, from 0 to 1.
+ * Exposes it to CSS as `--p` on <html> and returns a getter for the 3D scene.
+ */
+export function initScrollProgress() {
+  const root = document.documentElement;
+  let progress = 0;
+  let ticking = false;
+
+  const update = () => {
+    ticking = false;
+    progress = Math.min(Math.max(window.scrollY / window.innerHeight, 0), 1);
+    root.style.setProperty('--p', progress.toFixed(3));
+  };
+
+  const request = () => {
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(update);
+    }
+  };
+
+  window.addEventListener('scroll', request, { passive: true });
+  window.addEventListener('resize', request);
+  update();
+
+  return () => progress;
+}
+
 /** Keeps the copyright year in the footer current. */
 export function initYear() {
   document.querySelectorAll('[data-year]').forEach((el) => {

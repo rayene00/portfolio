@@ -6,5 +6,7 @@ export default defineConfig({
   base: './',
   build: {
     target: 'es2020',
+    // The Three.js scene chunk (~130 kB gzipped) is lazy-loaded after first paint.
+    chunkSizeWarningLimit: 600,
   },
 });
