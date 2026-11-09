@@ -288,6 +288,20 @@
   font-weight: 500;
 }
 
+/* Links to the organizations (school, employers) */
+.org-link {
+  text-decoration: underline dotted;
+  text-decoration-color: var(--accent-border);
+  text-underline-offset: 4px;
+  transition: text-decoration-color 0.2s ease, color 0.2s ease;
+}
+
+.org-link:hover {
+  color: #c4b5fd;
+  text-decoration-style: solid;
+  text-decoration-color: currentColor;
+}
+
 /* ---------- Experience ---------- */
 
 .experience-item {
