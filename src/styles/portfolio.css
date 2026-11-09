@@ -26,6 +26,52 @@
   height: 100svh;
 }
 
+/* Name + slogan over the sphere, fading out as the camera dives in */
+.intro__text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  text-align: center;
+  opacity: calc(1 - var(--p, 0) * 2.5);
+  transform: translateY(calc(var(--p, 0) * -40px));
+  animation: fade-in 1.2s ease 0.2s both;
+}
+
+.intro__name {
+  margin-bottom: 18px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.intro__slogan {
+  font-size: clamp(2.6rem, 8vw, 6rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: #fff;
+  text-shadow: 0 0 2.5rem rgba(9, 8, 13, 0.9);
+}
+
+.intro__dot {
+  color: var(--accent);
+}
+
+.intro__sub {
+  margin-top: 26px;
+  max-width: 34rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text);
+  text-shadow: 0 0 1rem rgba(9, 8, 13, 0.9);
+}
+
 .intro__prompt {
   position: absolute;
   left: 50%;
